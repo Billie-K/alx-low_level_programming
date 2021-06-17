@@ -1,8 +1,18 @@
 #include <stdio.h>
-int main()
+/**
+ * main - prints on screen
+ * void: operand
+ *
+ * Description: This is a longer description.
+ * Don't forget that a line should not exceed 80 characters.
+ * But you're totally free to use several lines to properly
+ * describe your function
+ * Return: The sum of the two parameters
+ */
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 
 	getchar();
-	return 0;
+	return (0);
 }
