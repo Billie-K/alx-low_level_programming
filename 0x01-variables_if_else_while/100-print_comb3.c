@@ -1,25 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
 * main - the main func
 *
-* Description: a program that prints base
-* 10 numbers
-* Return: returns the numbers
+* Description: print combinations of two digits.
+* Return: Always 0 (Success)
 */
-
 int main(void)
 {
-int num;
+int m, n;
 
-for (num = 0; num < 10; num++)
+for (m = 48; m <= 57; m++)
 {
-putchar(num + '0');
-
-for (num = 0; num < 10; num++)
+for (n = 48; n <= 57; n++)
 {
-putchar(num + '0');
+if (n > m)
+{
+putchar(m);
+putchar(n);
+if (m != 56 || n != 57)
+{
+putchar(',');
+putchar(32);
 }
-
+}
+}
 }
 putchar('\n');
 return (0);
