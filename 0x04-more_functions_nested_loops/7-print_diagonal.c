@@ -21,6 +21,11 @@ for (sp = 1; sp < co; sp++)
 _putchar(' ');
 }
 _putchar('\\');
+ if (co == n)
+{
+continue;
+}
+
 _putchar('\n');
 }
 }
