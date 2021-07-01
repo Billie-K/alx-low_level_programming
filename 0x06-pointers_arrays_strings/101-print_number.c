@@ -19,7 +19,6 @@ res = n;
 _putchar('-');
 }
 
-
 temp = res;
 while (temp <= -10)
 {
@@ -29,7 +28,7 @@ temp /= 10;
 
 while (expo >= 1)
 {
-putchar(((res / expo) % 10) * -1 + '0');
+_putchar(((res / expo) % 10) * -1 + '0');
 expo /= 10;
 }
 }
