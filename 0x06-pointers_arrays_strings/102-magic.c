@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+* main - the main func
+*
+* Return nothing
+*/
 int main(void)
 {
 int n;
