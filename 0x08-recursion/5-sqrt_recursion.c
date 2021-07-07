@@ -4,7 +4,7 @@
 * @a: number to check
 * @b: checker
 *
-* Return: a natural sqrt 
+* Return: a natural sqrt
 */
 int sqrt_checker(int a, int b)
 {
