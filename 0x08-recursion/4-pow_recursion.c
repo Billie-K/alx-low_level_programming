@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * _pow_recursion - return x raised to the power
-0;136;0c* of y
+* of y
 * @x: the first parameter
 * @y: the second parameter
 * Return: x raised to y
@@ -19,7 +19,7 @@ else if (y == 0)
 return (1);
 }
 
-res *= _pow_recursion(x, y-1);
+res *= _pow_recursion(x, y - 1);
 
 return (res);
 }
