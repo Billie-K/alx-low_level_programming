@@ -1,29 +1,52 @@
 #include "holberton.h"
 
 /**
-* check_num - checks if a nummber is prime
-* @i: the checker
-* @n: the argument
-* Return: 1 if number is prime else 0
+* last_index - returns the last index of a string (counts the null char)
+* @s: pointer the string
+* Return: int
 */
-int check_num(int i, int n)
+int is_palindrome(char *s);
+int check(char *s, int start, int end, int pair);
+int last_index(char *s)
 {
-if (n < 2 || n % i == 0)
-return (0);
-else if (i > n / 2)
-return (1);
-else
-return (check_num(i + 1, n));
+int n = 0;
+
+if (*s > '\0')
+n += last_index(s + 1) + 1;
+
+return (n);
 }
 
 /**
-* is_prime_number - returns 1 if integer is prime
-* @n: interger to be checked
-* Return: 1 if n is prime
+* is_palindrome - check if a string is a palindrome
+* @s: string to check
+* Return: 0 or 1
 */
-int is_prime_number(int n)
+
+int is_palindrome(char *s)
 {
-if (n == 2)
+int end = last_index(s);
+
+return (check(s, 0, end - 1, end % 2));
+}
+
+/**
+* check - checker for the palindrome
+* @s: string
+* @start: int moves from right to left
+* @end: int moves from left to right
+* @pair: int
+* Return: 0 or 1
+*/
+
+
+int check(char *s, int start, int end, int pair)
+{
+
+if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
 return (1);
-return (check_num(2, n));
+else if (s[start] != s[end])
+return (0);
+else
+return (check(s, start + 1, end - 1, pair));
 }
