@@ -6,7 +6,7 @@
 * a new line
 * @argc: the number of args
 * @argv: an array of the args
-* Return 0 if successful
+* Return: 0 if successful
 */
 int main(int argc, char **argv)
 {
