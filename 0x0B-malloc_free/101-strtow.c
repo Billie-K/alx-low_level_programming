@@ -35,13 +35,12 @@ char **strtow(char *str)
 {
 int i, j, k, l, n = 0, wc = 0;
 char **w;
-
 if (str == NULL || *str == '\0')
 return (NULL);
 n = wrdcnt(str);
 if (n == 1)
 return (NULL);
-w = (char **)malloc(n * sizeof(char *));
+w = (char **)malloc(n *sizeof(char *));
 if (w == NULL)
 return (NULL);
 w[n - 1] = NULL;
@@ -53,11 +52,10 @@ if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 ;
 j++;
-w[wc] = (char *)malloc(j * sizeof(char));
+w[wc] = (char *)malloc(j *sizeof(char));
 j--;
 if (w[wc] == NULL)
 {
-
 for (k = 0; k < wc; k++)
 free(w[k]);
 free(w[n - 1]);
